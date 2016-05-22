@@ -6,8 +6,21 @@
   <body>
     <ul>
       <% @sounds.each do |s| %>
-        <li>/sounds/<%= s %></li>
+        <li>
+        <audio controls="controls">
+          Your browser does not support the <code>audio</code> element.
+          <source src="/sounds/<%= s %>" type="audio/mp3">
+        </audio>
+        </li>
       <% end %>
     </ul>
+
+    <script>
+      var audio = document.getElementsByTagName("audio");
+      for (var i = 0; i < audio.length; i++) {
+        console.log(audio[i]);
+        audio[i].play().then(function() { console.log("playing!"); });
+      }
+    </script>
   </body>
 </html>
