@@ -3,7 +3,6 @@ var _ = require('lodash');
 var React = require('react');
 var Controls = require('./Controls.jsx');
 var Tracks = require('./Tracks.jsx');
-var About = require('./About.jsx');
 var Footer = require('./Footer.jsx');
 
 if (typeof window !== 'undefined') {
@@ -204,14 +203,12 @@ var Root = React.createClass({
               playPause={this.playPause} />
           </div>
           <div className="container">
-            <About />
             <Footer />
           </div>
           <nav className="flex flex-baseline mr1" style={styles.nav}>
             <h1 className="h5 m0">
               <a href="#" className="button button-transparent">Microbeats</a>
             </h1>
-            <a href="#about" className="button button-transparent">About</a>
           </nav>
           <script id="initial-props" type="application/json" dangerouslySetInnerHTML={initialProps} />
           <script src="bundle.js" />
