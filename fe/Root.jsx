@@ -1,4 +1,3 @@
-
 var _ = require('lodash');
 var React = require('react');
 var Controls = require('./Controls.jsx');
@@ -22,8 +21,20 @@ var Root = React.createClass({
       theme: 0,
       color: 'black',
       backgroundColor: 'white',
-      tracks: this.props.initialTracks
+      tracks: []
     }
+  },
+
+  componentDidMount: function() {
+    this.serverRequest = $.get("/api.json", function (result) {
+      this.setState({
+        tracks: result
+      });
+    }.bind(this));
+  },
+
+  componentWillUnmount: function() {
+    this.serverRequest.abort();
   },
 
   playPause: function(i) {

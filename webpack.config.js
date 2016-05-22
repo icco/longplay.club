@@ -12,5 +12,5 @@ module.exports = {
   module: {
     loaders: [ { test: /\.jsx$/, loader: 'jsx-loader' } ]
   },
-  plugins: [ new StaticSiteGeneratorPlugin('bundle.js', paths, data) ]
+  plugins: [ new StaticSiteGeneratorPlugin('bundle.js', paths, {}) ]
 };
