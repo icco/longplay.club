@@ -28,6 +28,7 @@ GEM
       net-ssh (>= 2.6.5)
     netrc (0.10.3)
     oj (2.15.0)
+    oj_mimic_json (1.0.1)
     rack (1.6.4)
     rack-protection (1.5.3)
       rack
@@ -58,6 +59,7 @@ DEPENDENCIES
   erubis (~> 2.7)
   heroku
   oj
+  oj_mimic_json
   rake
   shotgun
   sinatra
