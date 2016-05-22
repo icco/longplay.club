@@ -8,6 +8,5 @@ if (typeof document !== 'undefined') {
 
 // Exported static site renderer:
 module.exports = function render(locals, callback) {
-  var html = React.renderToString(React.createElement(Root, locals));
-  callback(null, '<!DOCTYPE html>' + html);
+  callback(null, '<html>...</html>');
 };

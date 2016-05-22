@@ -6,7 +6,7 @@ module.exports = {
   entry: './entry.js',
   output: {
     filename: 'bundle.js',
-    path: __dirname,
+    path: 'public',
     libraryTarget: 'umd'
   },
   module: {

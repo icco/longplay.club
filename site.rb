@@ -4,6 +4,10 @@ require "rubygems" unless defined?(Gem)
 require "bundler/setup"
 Bundler.require(:default, RACK_ENV)
 
+get '/' do
+  redirect '/index.html'
+end
+
 get '/api.json' do
   @sounds = Dir.glob('public/sounds/*.mp3').sample(10).map {|s| "/sounds/#{File.basename(s)}" }
 
