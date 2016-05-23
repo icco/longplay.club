@@ -19,7 +19,13 @@ var Root = React.createClass({
     this.serverRequest.abort();
   },
 
-  render: function() { }
+  render: function() {
+    return (
+      <ul>
+      <li>{this.tracks[0]}</li>
+      </ul>
+    )
+  }
 });
 
 module.exports = Root;

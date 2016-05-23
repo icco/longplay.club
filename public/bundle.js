@@ -64,6 +64,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	// Exported static site renderer:
 	module.exports = function render(locals, callback) {
+	  console.log(locals);
 	  callback(null, '<html>...</html>');
 	};
 
@@ -4240,7 +4241,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	    this.serverRequest.abort();
 	  },
 
-	  render: function() { }
+	  render: function() {
+	    return (
+	      React.createElement("ul", null, 
+	      React.createElement("li", null, this.tracks[0])
+	      )
+	    )
+	  }
 	});
 
 	module.exports = Root;
